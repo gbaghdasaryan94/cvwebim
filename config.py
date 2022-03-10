@@ -27,9 +27,13 @@ class Config:
     SESSION_TYPE = "filesystem"
 
     # Database
-    SQLALCHEMY_DATABASE_URI = environ.get("SQLALCHEMY_DATABASE_URI")
+    # SQLALCHEMY_DATABASE_URI = "sqlite:///survey.db"
     SQLALCHEMY_TRACK_MODIFICATIONS = environ.get("SQLALCHEMY_TRACK_MODIFICATIONS")
-
+    # FLASK_APP="wsgi.py"
+    # FLASK_DEBUG=1
+    APP_CONFIG_FILE="config.ini"
+    SQLALCHEMY_DATABASE_URI="sqlite:///survey.db"
+    SQLALCHEMY_TRACK_MODIFICATIONS=False
 
     MAIL_SERVER = 'smtp.beget.com'
     MAIL_PORT = 465
