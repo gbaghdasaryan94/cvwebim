@@ -1,0 +1,80 @@
+*{
+	overflow: visible !important;
+}
+
+body {
+	background: #fff;
+	font-size: 18px;
+	font-family: verdana, sans-serif;
+	margin: 0;
+	/* padding: 10px; */
+}
+
+.profile-image{
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	background-size: cover;
+	background-position: top center;
+	background-repeat: no-repeat;
+}
+
+.skills span{
+	padding: 10px 10px;
+	margin: 5px;
+	display: inline-block;
+	background-color: #fff;
+	color: #000000;
+}
+
+.block {
+	padding: 1% 50px;
+	background: white;
+}
+
+
+
+.info{
+	margin: 10px 25px;
+	border-bottom: 1px solid #bdbdbd;
+	display: block;
+	height: auto !important;
+	clear: both;
+}
+.head {
+	margin: 10px 25px;
+}
+h1 {
+	display: block;
+
+}
+
+.sub-heading { 
+font-weight: bold;       
+}
+
+.duration {
+	color: #14a17f;
+	font-size:12px;
+}
+
+.skills span{
+	background-color: #15a27f;
+	background-image: linear-gradient(to right top, #25e3b3, #21e1b6, #1edfba, #1dddbc, #1edbbf);
+	color: #fff;
+}
+
+
+@media print {
+	div.block {
+		page-break-inside:avoid;
+	}
+}
+
+@page 
+{
+	size:  A4;   /* auto is the initial value */
+	margin: 0mm;  /*this affects the margin in the printer settings     */
+}   

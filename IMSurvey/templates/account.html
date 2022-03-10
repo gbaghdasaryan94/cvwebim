@@ -1,0 +1,201 @@
+{% extends "minlayout.html" %}
+
+{% block title %}
+My Account
+{% endblock %}
+
+{% block header_includes  %}
+<link rel="stylesheet" type="text/css" href="static/css/resume.css">
+{% endblock  %}
+
+{% block headerContent %}
+	{% include 'addinfo.html' %}
+{% endblock%}
+
+{% block main %}
+<section class="main">
+	<div class="container mt-4">
+		<div class="row">
+
+			<div class="col-lg-4 col-12">
+
+				<div class="sidebar ">
+					<div class="sidebar-top">
+						<div class="profile-image" style="background-image: url('{{ user.avatar }}');">
+							<div class="edit"><i class="fa fa-edit change " data-toggle="modal"
+									data-target="#change"></i></div>
+						</div>
+
+					</div>
+					<div class="profile-basic">
+						<h2 class="us-name">{{ user.fullname }}</h2>
+					</div>
+
+					<div class="profile-info">
+						<h2>Personal info</h2>
+						<p> <i class="fas fa-phone-alt"></i> {{ user.phone }}</p>
+						<p> <i class="fas fa-envelope"></i> {{ user.email }}</p>
+						<p> <i class="fas fa-map-marker-alt"></i> {{ user.address }}</p>
+					</div>
+				</div>
+
+				<br />
+
+				<div class="sidebar">
+					{% if pers %}
+					<div class="profile-info skills comunication">
+						<h2>Personal Skills</h2>
+						{% for item in pers %}
+						<div class="skill-alone info" data="{{ item.id }}" info="skill">
+							{{ item.skill }}<div class="edit"><i class="fa fa-remove remove"></i></div>
+						</div>
+						{% endfor %}
+					</div>
+					{% endif %}
+
+					{% if hobby %}
+					<div class="profile-info skills hobby">
+						<h2>Hobbies</h2>
+						{% for item in hobby %}
+						<div class="skill-alone info" data="{{ item.id }}" info="skill">{{ item.skill }}<div class="edit"><i
+									class="fa fa-remove remove"></i></div>
+						</div>
+						{% endfor %}
+					</div>
+					{% endif %}
+
+				</div>
+				<br>
+				<div class="download"><a href="/topdf/1" class="btn ">Download PDF 1<i
+							class="fas fa-arrow-circle-down"></i></a></div>
+				<br>
+				<div class="download"><a href="/topdf/2" class="btn ">Download PDF 2<i
+							class="fas fa-arrow-circle-down"></i></a></div>
+				<br>
+			</div>
+
+
+			<div class="col-lg-8 col-12">
+				<div class="content">
+
+					{% if not (work or inter or edu or prof) %}
+					<h2>Already filled in ?</h2>
+					<h4>You can now review your CV in Add section and download the PDF out of 2 versions</h4>
+					<h6>Click the Account button in header to view PDF</h6>
+					{% endif %}
+
+					{% if work %}
+					<div class="block work">
+						<h1 class="heading"> Work Experience</h1>
+						{% for item in work %}
+						<div class="info" data="{{ item.id }}" info="info">
+							<div class="edit"><i class="fa fa-edit change " data-toggle="modal"
+									data-target="#change"></i>&nbsp;<i class="fa fa-remove remove"></i></div>
+							<p class="sub-heading">{{ item.name }}</p>
+							<p class="duration">{{ item.start }} - {{ item.finish }}</p>
+							<p>{{ item.profession }}</p>
+						</div>
+						{% endfor %}
+					</div>
+					{% endif %}
+
+
+					{% if inter %}
+					<div class="block internship">
+						<h1 class="heading">Intership</h1>
+						{% for item in inter %}
+						<div class="info" data="{{ item.id }}" info="info">
+							<div class="edit"><i class="fa fa-edit change " data-toggle="modal"
+									data-target="#change"></i>&nbsp;<i class="fa fa-remove remove"></i></div>
+							<p class="sub-heading">{{ item.name }}</p>
+							<p class="duration">{{ item.start }} - {{ item.finish }}</p>
+							<p>{{ item.profession }}</p>
+						</div>
+						{% endfor %}
+					</div>
+					{% endif %}
+
+
+					{% if edu %}
+					<div class="block education">
+						<h1 class="heading">Education</h1>
+						{% for item in edu %}
+						<div class="info" data="{{ item.id }}" info="info">
+							<div class="edit"><i class="fa fa-edit change " data-toggle="modal"
+									data-target="#change"></i>&nbsp;<i class="fa fa-remove remove"></i></div>
+							<p class="sub-heading">{{ item.name }}</p>
+							<p class="duration">{{ item.start }} - {{ item.finish }}</p>
+							<p>{{ item.profession }}</p>
+						</div>
+						{% endfor %}
+					</div>
+					{% endif %}
+
+
+					{% if prof %}
+					<div class="block">
+						<h1 class="heading">Professional Skills</h1>
+						<div class="skills profession">
+							{% for item in prof %}
+							<div class="skill-alone info" data="{{ item.id }}" info="skill">{{ item.skill }}
+								<div class="edit"><i class="fa fa-remove remove "></i></div>
+							</div>
+							{% endfor %}
+						</div>
+					</div>
+					{% endif %}
+
+				</div>
+			</div>
+			<div class="download-circle"><a href="/topdf/1"><i class="fas fa-file-download"></i></a> </div>
+		</div>
+	</div>
+</section>
+
+
+<div class="modal fade" id="change" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+	aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title" id="exampleModalLongTitle"> Edit </h5>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<div class="modal-body">
+				<form action="#">
+					<div class="form-row">
+						<div class="form-group col-md-6">
+							<label for="name">Name Of Institution</label>
+							<input type="text" class="form-control" name="name" placeholder="Name Of Institution">
+						</div>
+						<div class="form-group col-md-6">
+							<label for="profession">Title</label>
+							<input type="text" class="form-control" name="profession"
+								placeholder="Enter the profession title">
+						</div>
+					</div>
+					<div class="form-row">
+						<div class="form-group col-md-6">
+							<label for="start">Start Date</label>
+							<input type="date" class="form-control" name="start" placeholder="MM-DD-YYYY">
+						</div>
+						<div class="form-group col-md-6">
+							<label for="finish">End Date</label>
+							<input type="date" class="form-control" name="finish" placeholder="MM-DD-YYYY">
+						</div>
+					</div>
+					<input type="text" name="id" hidden>
+					<div class="text-center"><button class="btn btn-white update">Save</button></div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+{% endblock  %}
+
+
+{% block footer_includes %}
+<script src="static/js/account.js"></script>
+{% endblock  %}

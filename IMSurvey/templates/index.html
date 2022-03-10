@@ -1,0 +1,182 @@
+{% extends "layout.html" %}
+
+
+{% block headerContent %}   
+    <div class="header-content container">
+        <div class="col">
+            <div class="text ">
+                <h3>Edgar. </h3>
+                <h6>The first impression is crussial. To make an impression while applying for a job is to have beautiful, proffessional and tidy CV.<br> We created a website that allows you to create your CV in a minutes and download your CV with 2 teamplates : the choice comes on you... </h6>
+                <a class="button dark" href="#skills">Top 10 Skills</a>
+
+                <a class="button white" href="#contact" rel="m_PageScroll2id">Contact us</a>
+            </div>
+        </div>
+    </div>
+
+{% endblock%}
+
+
+{% block main %} 
+        <section class="project" id="section-project">
+            <div class="text">
+                <h2>How to use</h2>
+                <h4></h4>To create CV just follow the steps below...</h4>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 project_icon">
+                        <div class="single_project">
+                            <!-- <i class="icofont icofont-team"></i> -->
+                            <i class="icofont-sign-in"></i>
+                            <h3><a href="#">Register</a></h3>
+                            <p>Don't Have an account ? Just a simple Click to start.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 project_icon">
+                        <div class="single_project">
+                            <!-- <i class="icofont icofont-tasks-alt"></i> -->
+                            <i class="icofont-sub-listing"></i>
+                            <h3><a href="#">Fill the Teamplates</a></h3>
+                            <p>Complete Onboarding and fill your specifications</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 project_icon">
+                        <div class="single_project">
+                            <i class="icofont-download"></i>
+                            <h3><a href="#">Download CV</a></h3>
+                            <p>View and download your CV in PDF format </p>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <p class="button"><a class="button" href="#" data-toggle="modal" data-target="#register">Get started</a></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="services" id = "skills">
+            <div class="text">
+                <h2>Top 10 must-have skills</h2>
+                <p>WHAT ARE THE TOP 10 SKILLS THAT'LL GET YOU A JOB WHEN YOU GRADUATE?</p>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="services_area">
+                            <div id="accordion">
+                                <h3 class="accordion-header active"><i class="material-icons first "></i>Commercial awareness<i class="material-icons last">arrow_drop_down</i></h3>
+                                <div class="slide_up accordion-content">
+                                    <div class="accordion_img">
+                                        <img src="/static/img/commercial-awareness.jpg" alt="">
+                                    </div>
+                                    <p>This is about knowing how a business or industry works and what makes a company tick. </p>
+                                    <p>Showing that you have an understanding of what the organisation wants to achieve through its products and services, and how it competes in its marketplace.</p>
+                                </div>
+                                <h3 class="accordion-header"><i class="material-icons first"></i>Communications<i class="material-icons last">arrow_drop_down</i></h3>
+                                <div class="slide_up accordion-content">
+                                    <div class="accordion_img">
+                                        <img src="/static/img/communication.jpg" alt="">
+                                    </div>
+                                    <p>This covers verbal and written communication, and listening. </p>
+                                    <p>It's about being clear, concise and focused; being able to tailor your message for the audience and listening to the views of others. </p>
+                                </div>
+                                <h3 class="accordion-header"><i class="material-icons first"></i>Teamwork<i class="material-icons last">arrow_drop_down</i></h3>
+                                <div class="slide_up accordion-content">
+                                    <div class="accordion_img">
+                                        <img src="/static/img/teamwork.jpg" alt="">
+                                    </div>
+                                    <p>You'll need to prove that you're a team player but also have the ability to manage and delegate to others and take on responsibility.</p>
+                                    <p>It's about building positive working relationships that help everyone to achieve goals and business objectives.</p>
+                                </div>
+                                <h3 class="accordion-header"><i class="material-icons first"></i>Negotiation and persuasion<i class="material-icons last">arrow_drop_down</i></h3>
+                                <div class="slide_up accordion-content">
+                                    <div class="accordion_img">
+                                        <img src="/static/img/negotiation.jpg" alt="">
+                                    </div>
+                                    <p>This is about being able to set out what you want to achieve and how, but also being able to understand where the other person is coming from so that you can both get what you want or need and feel positive about it.</p>
+                                    
+                                </div>
+                                <h3 class="accordion-header"><i class="material-icons first"></i>Organisation<i class="material-icons last">arrow_drop_down</i></h3>
+                                <div class="slide_up accordion-content">
+                                    <div class="accordion_img">
+                                        <img src="/static/img/organization.jpg" alt="">
+                                    </div>
+                                    <p>This is about showing that you can prioritise, work efficiently and productively, and manage your time well.</p>
+                                    <p>It's also good to be able to show employers how you decide what is important to focus on and get done, and how you go about meeting deadlines.</p>
+                                    
+                                </div>
+                                <h3 class="accordion-header"><i class="material-icons first"></i>Problem solving<i class="material-icons last">arrow_drop_down</i></h3>
+                                <div class="slide_up accordion-content">
+                                    <div class="accordion_img">
+                                        <img src="/static/img/problemsolving.jpg" alt="">
+                                    </div>
+                                    <p>You need to display an ability to take a logical and analytical approach to solving problems and resolving issues. </p>
+                                    <p>It's also good to show that you can approach problems from different angles.</p>                                    
+                                </div>
+                                <h3 class="accordion-header"><i class="material-icons first"></i>Leadership<i class="material-icons last">arrow_drop_down</i></h3>
+                                <div class="slide_up accordion-content">
+                                    <div class="accordion_img">
+                                        <img src="/static/img/leadership.jpg" alt="">
+                                    </div>
+                                    <p>You may not be a manager straight away, but graduates need to show potential to motivate teams and other colleagues that may work for them. </p>
+                                    <p>It's about assigning and delegating tasks well, setting deadlines and leading by good example.</p>
+                                    
+                                </div>
+                                <h3 class="accordion-header"><i class="material-icons first"></i>Perseverance and motivation<i class="material-icons last">arrow_drop_down</i></h3>
+                                <div class="slide_up accordion-content">
+                                    <div class="accordion_img">
+                                        <img src="/static/img/motivation.jpg" alt="">
+                                    </div>
+                                    <p>Employers want people to have a bit of get-up-and-go. </p>
+                                    <p>Working life presents many challenges and you need to show employers that you're the kind of person who will find a way through, even when the going gets tough... and stay cheerful-ish.</p>
+                                    
+                                </div>
+                                <h3 class="accordion-header"><i class="material-icons first"></i>Ability to work under pressure<i class="material-icons last">arrow_drop_down</i></h3>
+                                <div class="slide_up accordion-content">
+                                    <div class="accordion_img">
+                                        <img src="/static/img/pressure.jpg" alt="">
+                                    </div>
+                                    <p>This is about keeping calm in a crisis and not becoming too overwhelmed or stressed.</p>
+                                    <p>It involves dealing with constraints which are often outside of your control - these might be resource or time constraints, the difficulty of the task or having insufficient knowledge required to complete the task, or unforeseen changes or problems.</p>
+                                    
+                                </div>
+                                <h3 class="accordion-header"><i class="material-icons first"></i>Confidence<i class="material-icons last">arrow_drop_down</i></h3>
+                                <div class="slide_up accordion-content">
+                                    <div class="accordion_img">
+                                        <img src="/static/img/confidence.jpg" alt="">
+                                    </div>
+                                    <p>In the workplace you need to strike the balance of being confident in yourself but not arrogant, but also have confidence in your colleagues and the company you work for.</p>
+                                    <p>Self-confidence is extremely important in almost every aspect of our lives, yet so many people struggle to find it. Sadly, this can be a vicious circle: people who lack self-confidence can find it difficult to become successful.</p>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="contact_area" id="contact">
+            <div class="text">
+                <h2>Contact Us</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna</p>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form_area">
+                            <form action="/contact" method="post">
+                                <div class="input_area">
+                                    <input type="text" name="name" placeholder="First Name" required>
+                                    <input type="text" name="lastName" placeholder="Last Name" required>
+                                    <input type="email" name="email" placeholder="Email" required>
+                                    <input type="text" name="phone" placeholder="Phone">
+                                </div>
+                                <textarea name="text" placeholder="Message" required></textarea>
+                                <input type="submit" value="SEND" class="button"></p>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+{% endblock %}

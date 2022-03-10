@@ -1,0 +1,133 @@
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>My CV</title>
+	<!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+	<link rel="stylesheet" type="text/css" href="grid4.css">
+	<link rel="stylesheet" type="text/css" href="2.css">
+</head>
+
+<body>
+	<!-- <div class="container"> -->
+		<div class="row">
+			<div class="col-4">
+				<div class="profile-image" style="background-image: url('man.jpg');" ></div>
+			</div>
+			<div class="col-8">
+				<div class="block">
+					<h2 class="heading">Petrosik Poxosyan</h2>
+					<div class="">
+						<p><i>Web Developer</i> </p>
+					</div>
+					<h2 class="heading">Personal info</h2>
+					<div class="">
+						<p> <i class="fas fa-phone-alt"></i> 987-654-32-10</p>
+						<p> <i class="fas fa-envelope"></i> petrosik_poxoyan777@gmail.com</p>
+						<p> <i class="fas fa-map-marker-alt"></i> 24 Golden Tower Amborkhana, Sylhet. SYL-3RF87W</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-12">
+				<div id="content" class="block">
+					<h1 class="heading"> Work Experience</h1>
+					<div class="info">
+						<p class="sub-heading">UI/UX Designer @Academy</p>
+						<p class="duration">JAN 2016 - DEC 2019</p>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+							tempor incididunt ut labore et dolore magna aliqua.</p>
+					</div>
+					<div class="info">
+						<p class="sub-heading">UI/UX Designer @Academy</p>
+						<p class="duration">JAN 2016 - DEC 2019</p>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+							tempor incididunt ut labore et dolore magna aliqua.</p>
+					</div>
+					<div class="info">
+						<p class="sub-heading">UI/UX Designer @Academy</p>
+						<p class="duration">JAN 2016 - DEC 2019</p>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+							tempor incididunt ut labore et dolore magna aliqua.</p>
+					</div>
+					<div class="info">
+						<p class="sub-heading">Creative Director @DeviserWeb</p>
+						<p class="duration">JAN 2014 - DEC 2017</p>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+							tempor incididunt ut labore et dolore magna aliqua.</p>
+					</div>
+					<div class="info">
+						<p class="sub-heading">Graphics Designer @Creative Wrold</p>
+						<p class="duration">JAN 2011 - DEC 2014</p>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+							tempor incididunt ut labore et dolore magna aliqua.</p>
+					</div>
+					<h1 class="heading">Education</h1>
+					<div class="info">
+						<p class="sub-heading">Art &amp; Multimedia @Oxford University</p>
+						<p class="duration">JAN 2010 - DEC 2012</p>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+							tempor incididunt ut labore et dolore magna aliqua.</p>
+					</div>
+					<div class="info">
+						<p class="sub-heading">Post Graduation @Lorem</p>
+						<p class="duration">JAN 2010 - DEC 2011</p>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+							tempor incididunt ut labore et dolore magna aliqua.</p>
+					</div>
+					<div class="info">
+						<p class="sub-heading">TTMP Degree @Creative School</p>
+						<p class="duration">JAN 2009 - DEC 2012</p>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+							tempor incididunt ut labore et dolore magna aliqua.</p>
+					</div>
+					<h1 class="heading">Professional Skills</h1>
+					<div class="info skills">
+						<p>
+							<span>jQuery</span>
+							<span>Windows Server</span>
+							<span>JavaScript Frameworks</span>
+							<span>Linux OS</span>
+							<span>PHP</span>
+							<span>JavaScript</span>
+							<span>Windows 7/8.1/10</span>
+							<span>C++</span>
+							<span>Sass</span>
+							<span>AngularJS</span>
+							<span>HTML/CSS</span>
+						</p>
+					</div>
+
+					<h1 class="heading">Personal Skills</h1>
+					<div class="info skills">
+						<p>
+							<span>Problem solving</span>
+							<span>Detail-oriented</span>
+						</p>
+					</div>
+					
+					<h1 class="heading">Hobbis</h1>
+					<div class="info skills">
+						<p>
+							<span>Problem solving</span>
+							<span>Detail-oriented</span>
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	<!-- </div> -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script>
+		$(document).ready(function () {
+			let obj = $("#content").children(".info");
+			console.log(obj);
+			for (let i = 4; i < obj.length; i += 4) {
+				$("<div style='page-break-after:always !important; height: 100px;'>").insertAfter(obj[i]);
+			}
+		});
+	</script>
+</body>
+
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>My CV</title>
+	<!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+	<link rel="stylesheet" type="text/css" href="grid4.css">
+	<link rel="stylesheet" type="text/css" href="2.css">
+	
+</head>
+
+<body>
+	<!-- <div class="container"> -->
+		<div class="row">
+			<div class="col-4">
+				<div class="profile-image" style="background-image: url('{{ user.avatar }}');"></div>
+			</div>
+			<div class="col-8">
+				<div class="block">
+					<h1 class="heading">{{ user.fullname }}</h1>
+					<h1 class="heading">Personal info</h1>
+					<div class="head">
+							<p> <i class="fas fa-phone-alt"></i> {{ user.phone }}</p>
+							<p> <i class="fas fa-envelope"></i> {{ user.email }}</p>
+							<p> <i class="fas fa-map-marker-alt"></i> {{ user.address }}</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-12">
+				<div id="content" class="block">
+					{% if work %}
+					<h1 class="heading"> Work Experience</h1>
+					{% for item in work %}
+						<div class="info">
+							<p class="sub-heading">{{ item.name }}</p>
+							<p class="duration">{{ item.start }} - {{ item.finish }}</p>
+							<p>{{ item.profession }}</p>
+						</div>
+					{% endfor %}
+					{% endif %}
+					
+					{% if inter %}
+					<h1 class="heading">Intership</h1>
+					{% for item in inter %}
+					<div class="info">
+						<p class="sub-heading">{{ item.name }}</p>
+						<p class="duration">{{ item.start }} - {{ item.finish }}</p>
+						<p>{{ item.profession }}</p>
+					</div>
+					{% endfor %}
+					{% endif %}
+					
+
+					{% if edu %}
+					<h1 class="heading">Education</h1>
+					{% for item in edu %}
+					<div class="info">
+						<p class="sub-heading">{{ item.name }}</p>
+						<p class="duration">{{ item.start }} - {{ item.finish }}</p>
+						<p>{{ item.profession }}</p>
+					</div>
+					{% endfor %}
+					{% endif %}
+					
+					{% if prof %}
+					<h1 class="heading">Professional Skills</h1>
+					<div class="info skills">
+						<p>
+							{% for item in prof %}
+								<span>{{ item.skill }}</span>
+							{% endfor %}
+						</p>
+					</div>
+					{% endif %}
+					
+					{% if pers %}
+					<h1 class="heading">Personal Skills</h1>
+					<div class="info skills">
+						<p>
+							{% for item in pers %}
+							<span>{{ item.skill }}</span>
+							{% endfor %}
+						</p>
+					</div>
+					{% endif %}
+					
+					{% if hobby %}
+					<h1 class="heading">Hobbis</h1>
+					<div class="info skills">
+						<p>
+							{% for item in hobby %}
+							<span>{{ item.skill }}</span>
+							{% endfor %}
+						</p>
+					</div>
+					{% endif %}
+				</div>
+			</div>
+		</div>
+	<!-- </div> -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script>
+		$(document).ready(function () {
+			let obj = $("#content").children(".info");
+			// $("<div style='page-break-after:always !important; display: block; clear: both;'>").insertAfter(obj[4]);
+			// $("<div style='page-break-after:always !important; display: block; clear: both;'>").insertAfter(obj[10]);
+			for (let i = 5; i < obj.length; i += 6) {
+				$("<div style='page-break-after:always !important; display: block; clear: both;'>").insertAfter(obj[i]);
+			}
+		});
+	</script>
+</body>
+
+</html>

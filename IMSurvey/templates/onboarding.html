@@ -1,0 +1,104 @@
+{% extends "layout.html" %}
+
+
+
+{% block title %}
+Onboarding
+{% endblock %}
+
+{% block headerContent %}
+<!-- Content -->
+<div class="rgba-black-strong py-5 px-4">
+    <div class="row d-flex justify-content-center">
+      <div class="col">
+        <div class="onboarding">
+        <form class="form signup" action="/onboarding" method="POST" enctype="multipart/form-data">
+          <h1 class="h3 text-center font-weight-bold">Hey {{fullname}}</h1>
+          <p class="onbording-text"> Before landing on the main fill-form page there are some basic info we would like to know </p>
+
+          <div class="form-label-group mt-3">
+            <h5>Date of birth </h5> 
+            <input type="date" class="form-control" name="birth"  placeholder="MM-DD-YYYY"> 
+          </div>
+
+          <div id="phone" class="form-label-group mt-3">
+            <input type="tel" class="form-control" name="phone" placeholder="Phone">
+          </div>
+
+          <div class="mt-3">
+            <h5>Gender</h5> 
+            <div class="form-check-inline">
+              <label class="form-check-label contain" >Male
+                <input type="radio" class="form-check-input" id="gender1" name="sex" value="male" checked="checked"> <span class="checkmark"></span> 
+              </label>
+            </div>
+            <div class="form-check-inline">
+              <label class="form-check-label contain" >Female
+                <input type="radio" class="form-check-input" id="gender2" name="sex" value="female">  <span class="checkmark"></span> 
+              </label>
+            </div>
+            <div class="form-check-inline">
+              <label class="form-check-label contain" > Other
+                <input type="radio" class="form-check-input" id="gender3" name="sex" value="other"> <span class="checkmark"></span>
+              </label>
+            </div>
+          </div>
+
+          <div id="address" class="form-label-group mb-3">
+              <input type="text" class="form-control" name="address" placeholder="Enter your address">
+          </div>
+
+          <div class="form-label-group file-upload">
+            <h5>Avatar</h5> 
+            <div class="file-select">
+                <div class="file-select-button" id="fileName">Choose File</div>
+                <div class="file-select-name" id="noFile">No file chosen...</div> 
+            <input type="file" id="avatar" name="avatar" class="form-control">
+            </div>
+          </div>
+
+          <!-- <div class="file-upload">
+            <div class="file-select">
+              <div class="file-select-button" id="fileName">Choose File</div>
+              <div class="file-select-name" id="noFile">No file chosen...</div> 
+              <input type="file" name="chooseFile" id="chooseFile">
+            </div>
+          </div> -->
+
+          <div class="mt-3">
+            <h5>Civil status</h5> 
+            <div class="form-check-inline">
+              <label class="form-check-label contain" > Single
+                <input type="radio" class="form-check-input" id="status1" name="status" value="single" checked> <span class="checkmark"></span>
+              </label>
+            </div>
+            <div class="form-check-inline">
+              <label class="form-check-label contain" > Married
+                <input type="radio" class="form-check-input" id="status2" name="status" value="married"> <span class="checkmark"></span>
+              </label>
+            </div>
+            <div class="form-check-inline">
+              <label class="form-check-label contain" > Divorced
+                <input type="radio" class="form-check-input" id="status3" name="status" value="divorced"> <span class="checkmark"></span>
+              </label>
+            </div>
+          </div>
+
+
+          <div id="children" class="form-label-group mt-3">
+            <input type="number" class="form-control" name="children" min="0" placeholder="Children">
+          </div>
+
+
+          <div id="about" class="form-label-group mt-3">
+            <textarea type="text" name="about" class="form-control" placeholder="About"></textarea>
+          </div>
+
+          <button id="submit" type="submit" class="btn btn-white mt-3">Complete onboarding</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
+

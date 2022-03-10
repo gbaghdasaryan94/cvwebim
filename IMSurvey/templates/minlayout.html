@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Front page</title>
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,500,600,700,800,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="https://allyoucan.cloud/cdn/icofont/1.0.1/icofont.css" integrity="sha384-jbCTJB16Q17718YM9U22iJkhuGbS0Gd2LjaWb4YJEZToOPmnKDjySVa323U+W7Fv" crossorigin="anonymous"> -->
+    
+
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css">    
+    
+    <!-- <link rel="stylesheet" href="/static/css/icofont.css"> -->
+    <link rel="stylesheet" href="/static/css/slick.css">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="/static/css/responsive.css">
+
+    {% block header_includes %} {% endblock %}
+    <title>IM Survey - {% block title %}{% endblock %}</title>
+
+</head>
+
+<body class="loading">
+    <div class="wrapper">
+        <header class="header mini py-4">
+            <div class="container">
+                <div class="row menu-line">
+                    <div class="col-lg-4 col-sm-3 ">
+                        <div class="logo">
+                            <a href="/" class="logo-link"><img src="/static/img/white-logo.svg" alt="Logo"></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-8 col-sm-9">
+                        <div class="menu">
+                            <div class="sign_up">
+                                {% if session.user_id %}
+                                <p><a href="#" data-toggle="modal" data-target="#add"><i class="fas fa-plus" aria-hidden="true"></i>Add</a></p>
+                                <!-- <p><a href="/account"><i class="fas fa-address-card" aria-hidden="true"></i> Account</a></p> -->
+                                <p><a href="/logout"><i class="fas fa-sign-out-alt" aria-hidden="true"></i> Log Out</a></p>
+                                {% else %}
+                                <p><a href="#" data-toggle="modal" data-target="#login"><i class="fa fa-user"
+                                            aria-hidden="true"></i> Log In</a></p>
+                                <p><a href="#" data-toggle="modal" data-target="#register"><i class="fa fa-sign-in-alt"
+                                            aria-hidden="true"></i> Sign Up</a></p>
+                                {% endif %}
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                {% with messages = get_flashed_messages(with_categories=true) %}
+                {% if messages %}
+                {% for category, message in messages %}
+                    <div class="alert alert-{{ category }} alert-dismissible text-center fade show mt-3" role="alert">
+                        {{ message }}
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    {% endfor %}
+                {% endif %}
+                {% endwith %}
+
+                {% block headerContent %}{% endblock%}
+
+            </div>
+  
+        </header>
+
+        
+        {% block main %}{% endblock %}
+
+        <footer class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-4 ">
+                        <div class="footer-logo">
+                            <a href="#"><img src="/static/img/white-logo.svg" alt="Logo" class="logo-link"></a>
+                        </div>
+                        <div class="footer_first_menu">
+                            <!--  <ul>
+                                <li><a href="#">Privecy Policy</a></li>
+                                <li><a href="#">About Us</a></li>
+                                <li><a href="#">About Us</a></li>
+                            </ul> -->
+                        </div>
+                    </div>
+                    <div class="col-8 ">
+                        <div class="footer_last_menu cl-effect-3">
+                            <div class="row">
+                                <div class="col-12">
+                                    <ul>
+                                        <li><a href="#our-team">About Us</a></li>
+                                        <li><a href="#contact">Find Us</a></li>
+                                        <!-- <li><a href="#">Extension</a></li>
+                                        <li><a href="#">Pricing</a></li>
+                                        <li><a href="#">Help</a></li> -->
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="footer_last_icon">
+                                    <p><a href="#"><i class="fab fa-facebook-square" aria-hidden="true"></i></a>
+                                        <a href="#"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+                                        <a href="#"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p class="copy">&copy; <span class="year"></span> All rights reserved </p>
+            <!-- <div class="top" title="Наверх"><i class="fa fa-angle-double-up"></i></div> -->
+        </footer>
+    </div>
+
+
+    <script src="/static/js/jquery-3.1.1.min.js"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/ba60c13668.js" crossorigin="anonymous"></script>
+    
+      
+
+    <script src="/static/js/jquery.waypoints.min.js"></script>
+    <script src="/static/js/infinite.min.js"></script>
+    <script src="/static/js/jquery.animateNumber.min.js"></script>
+    <script src="/static/js/slick.min.js"></script>
+    <script src="/static/js/active.js"></script>
+
+    {% block footer_includes %} {% endblock %}
+
+
+</body>
+
+</html>

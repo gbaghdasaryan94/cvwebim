@@ -1,0 +1,318 @@
+<div class="modal fade" id="add" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+    aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <!-- <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle"> Add new information</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div> -->
+            <div class="modal-body">
+                <!-- Content -->
+                <div class="rgba-black-strong py-5 px-4">
+                    <div class="row d-flex justify-content-center">
+                        <div class="col">
+
+                            <!--Accordion wrapper-->
+                            <div class="accordion md-accordion accordion-5" id="accordionEx5" role="tablist"
+                                aria-multiselectable="true">
+
+                                <!-- Accordion card -->
+                                <div class="card mb-4">
+
+                                    <!-- Card header -->
+                                    <div class="card-header p-0 z-depth-1" role="tab" id="heading30">
+                                        <a data-toggle="collapse" data-parent="#accordionEx5" href="#collapse30"
+                                            aria-expanded="true" aria-controls="collapse30">
+                                            <i class="fas fa-user-graduate fa-2x p-3 mr-4 float-left black-text"
+                                                aria-hidden="true"></i>
+                                            <h4 class="text-uppercase white-text mb-0 py-3 mt-1">
+                                                EDUCATION
+                                            </h4>
+                                        </a>
+                                    </div>
+
+                                    <!-- Card body  show -->
+                                    <div id="collapse30" class="collapse" role="tabpanel" aria-labelledby="heading30"
+                                        data-parent="#accordionEx5">
+                                        <div class="card-body rgba-black-light white-text z-depth-1">
+                                            <form id="education" action="#">
+                                                <div class="form-row">
+                                                    <div class="form-group col-md-6">
+                                                        <label for="name">Name Of Institution</label>
+                                                        <input type="text" class="form-control" name="name"
+                                                            placeholder="Name Of Institution">
+                                                    </div>
+                                                    <div class="form-group col-md-6">
+                                                        <label for="profession">Title</label>
+                                                        <input type="text" class="form-control" name="profession"
+                                                            placeholder="Enter the profession title">
+                                                    </div>
+                                                </div>
+                                                <div class="form-row">
+                                                    <div class="form-group col-md-6">
+                                                        <label for="start">Start Date</label>
+                                                        <input type="date" class="form-control" name="start"
+                                                            placeholder="MM-DD-YYYY">
+                                                    </div>
+                                                    <div class="form-group col-md-6">
+                                                        <label for="finish">End Date</label>
+                                                        <input type="date" class="form-control" name="finish"
+                                                            placeholder="MM-DD-YYYY">
+                                                    </div>
+                                                </div>
+                                                <input type="text" hidden name="info" value="education">
+
+                                                <div class="text-center"><button type="submit"
+                                                        class="btn btn-white save" info="info">Save</button></div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Accordion card -->
+
+                                <!-- Accordion card -->
+                                <div class="card mb-4">
+
+                                    <!-- Card header -->
+                                    <div class="card-header p-0 z-depth-1" role="tab" id="heading31">
+                                        <a data-toggle="collapse" data-parent="#accordionEx5" href="#collapse31"
+                                            aria-expanded="true" aria-controls="collapse31">
+                                            <i class="fas fa-award fa-2x p-3 mr-4 float-left black-text"
+                                                aria-hidden="true"></i>
+                                            <h4 class="text-uppercase white-text mb-0 py-3 mt-1">
+                                                INTERNSHIP & TRAININGS
+                                            </h4>
+                                        </a>
+                                    </div>
+
+                                    <!-- Card body -->
+                                    <div id="collapse31" class="collapse" role="tabpanel" aria-labelledby="heading31"
+                                        data-parent="#accordionEx5">
+                                        <div class="card-body rgba-black-light white-text z-depth-1">
+                                            <form id="internship" action="#">
+                                                <div class="form-row">
+                                                    <div class="form-group col-md-6">
+                                                        <label for="name">Name Of Institution</label>
+                                                        <input type="text" class="form-control" name="name"
+                                                            placeholder="Name Of Institution">
+                                                    </div>
+                                                    <div class="form-group col-md-6">
+                                                        <label for="profession">Title</label>
+                                                        <input type="text" class="form-control" name="profession"
+                                                            placeholder="Enter the profession title">
+                                                    </div>
+                                                </div>
+                                                <div class="form-row">
+                                                    <div class="form-group col-md-6">
+                                                        <label for="start">Start Date</label>
+                                                        <input type="date" class="form-control" name="start"
+                                                            placeholder="MM-DD-YYYY">
+                                                    </div>
+                                                    <div class="form-group col-md-6">
+                                                        <label for="finish">End Date</label>
+                                                        <input type="date" class="form-control" name="finish"
+                                                            placeholder="MM-DD-YYYY">
+                                                    </div>
+                                                </div>
+                                                <input type="text" hidden name="info" value="intership">
+
+                                                <div class="text-center"><button type="submit"
+                                                        class="btn btn-white save" info="info">Save</button></div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Accordion card -->
+
+                                <!-- Accordion card -->
+                                <div class="card mb-4">
+
+                                    <!-- Card header -->
+                                    <div class="card-header p-0 z-depth-1" role="tab" id="heading32">
+                                        <a data-toggle="collapse" data-parent="#accordionEx5" href="#collapse32"
+                                            aria-expanded="true" aria-controls="collapse32">
+                                            <i class="fas fa-cogs fa-2x p-3 mr-4 float-left black-text"
+                                                aria-hidden="true"></i>
+                                            <h4 class="text-uppercase white-text mb-0 py-3 mt-1">
+                                                WORK EXPERIENCE
+                                            </h4>
+                                        </a>
+                                    </div>
+
+                                    <!-- Card body -->
+                                    <div id="collapse32" class="collapse" role="tabpanel" aria-labelledby="heading32"
+                                        data-parent="#accordionEx5">
+                                        <div class="card-body rgba-black-light white-text z-depth-1">
+                                            <form id="work" action="#">
+                                                <div class="form-row">
+                                                    <div class="form-group col-md-6">
+                                                        <label for="name">Name Of Institution</label>
+                                                        <input type="text" class="form-control" name="name"
+                                                            placeholder="Name Of Institution">
+                                                    </div>
+                                                    <div class="form-group col-md-6">
+                                                        <label for="profession">Title</label>
+                                                        <input type="text" class="form-control" name="profession"
+                                                            placeholder="Enter the profession title">
+                                                    </div>
+                                                </div>
+                                                <div class="form-row">
+                                                    <div class="form-group col-md-6">
+                                                        <label for="start">Start Date</label>
+                                                        <input type="date" class="form-control" name="start"
+                                                            placeholder="MM-DD-YYYY">
+                                                    </div>
+                                                    <div class="form-group col-md-6">
+                                                        <label for="finish">End Date</label>
+                                                        <input type="date" class="form-control" name="finish"
+                                                            placeholder="MM-DD-YYYY">
+                                                    </div>
+                                                </div>
+                                                <input type="text" hidden name="info" value="work">
+
+                                                <div class="text-center"><button type="submit"
+                                                        class="btn btn-white save" info="info">Save</button></div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Accordion card -->
+
+                                <!-- Accordion card -->
+                                <div class="card mb-4">
+
+                                    <!-- Card header -->
+                                    <div class="card-header p-0 z-depth-1" role="tab" id="heading33">
+                                        <a data-toggle="collapse" data-parent="#accordionEx5" href="#collapse33"
+                                            aria-expanded="true" aria-controls="collapse33">
+                                            <i class="fas fa-tasks fa-2x p-3 mr-4 float-left black-text"
+                                                aria-hidden="true"></i>
+                                            <h4 class="text-uppercase white-text mb-0 py-3 mt-1">
+                                                PROFESSIONAL SKILLS
+                                            </h4>
+                                        </a>
+                                    </div>
+
+                                    <!-- Card body -->
+                                    <div id="collapse33" class="collapse" role="tabpanel" aria-labelledby="heading33"
+                                        data-parent="#accordionEx5">
+                                        <div class="card-body rgba-black-light white-text z-depth-1">
+                                            <form id="profession" action="#">
+                                                <div class="form-row">
+                                                    <div class="form-group col-md-6">
+                                                        <label for="name">Skill name</label>
+                                                        <input type="text" class="form-control" name="skill"
+                                                            placeholder="Skill name">
+                                                    </div>
+                                                    <div class="form-group col-md-6">
+                                                        <label for="profession">Level</label>
+                                                        <input type="text" class="form-control" name="level"
+                                                            placeholder="Level">
+                                                    </div>
+                                                </div>
+                                                <input type="text" hidden name="info" value="prof">
+
+
+                                                <div class="text-center"><button type="submit"
+                                                        class="btn btn-white save" info="skill">Save</button></div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Accordion card -->
+
+                                <!-- Accordion card -->
+                                <div class="card mb-4">
+
+                                    <!-- Card header -->
+                                    <div class="card-header p-0 z-depth-1" role="tab" id="heading34">
+                                        <a data-toggle="collapse" data-parent="#accordionEx5" href="#collapse34"
+                                            aria-expanded="true" aria-controls="collapse34">
+                                            <i class="fas fa-american-sign-language-interpreting fa-2x p-3 mr-4 float-left black-text  aria-hidden="
+                                                true"></i>
+                                            <h4 class="text-uppercase white-text mb-0 py-3 mt-1">
+                                                COMUNICATION SKILLS
+                                            </h4>
+                                        </a>
+                                    </div>
+
+                                    <!-- Card body -->
+                                    <div id="collapse34" class="collapse" role="tabpanel" aria-labelledby="heading34"
+                                        data-parent="#accordionEx5">
+                                        <div class="card-body rgba-black-light white-text z-depth-1">
+                                            <form id="comunication" action="#">
+                                                <div class="form-row">
+                                                    <div class="form-group col-md-6">
+                                                        <label for="name">Skill Name</label>
+                                                        <input type="text" class="form-control" name="skill"
+                                                            placeholder="What you are good at?">
+                                                    </div>
+                                                    <div class="form-group col-md-6">
+                                                        <label for="profession">Level</label>
+                                                        <input type="text" class="form-control" name="level"
+                                                            placeholder="Level of proficiency">
+                                                    </div>
+                                                </div>
+                                                <input type="text" hidden name="info" value="pers">
+
+                                                <div class="text-center"><button type="submit"
+                                                        class="btn btn-white save" info="skill">Save</button></div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Accordion card -->
+
+                                <!-- Accordion card -->
+                                <div class="card mb-4">
+
+                                    <!-- Card header -->
+                                    <div class="card-header p-0 z-depth-1" role="tab" id="heading35">
+                                        <a data-toggle="collapse" data-parent="#accordionEx5" href="#collapse35"
+                                            aria-expanded="true" aria-controls="collapse35">
+                                            <i class="fab fa-the-red-yeti fa-2x p-3 mr-4 float-left black-text"
+                                                aria-hidden="true"></i>
+                                            <h4 class="text-uppercase white-text mb-0 py-3 mt-1">
+                                                HOBBIES
+                                            </h4>
+                                        </a>
+                                    </div>
+
+                                    <!-- Card body -->
+                                    <div id="collapse35" class="collapse" role="tabpanel" aria-labelledby="heading35"
+                                        data-parent="#accordionEx5">
+                                        <div class="card-body rgba-black-light white-text z-depth-1">
+                                            <form id="hobby" action="#">
+                                                <div class="form-row">
+                                                    <div class="form-group col">
+                                                        <label for="name">Hobby Name</label>
+                                                        <textarea type="text" class="form-control" rows="3" name="skill"
+                                                            placeholder="Enter hobby separated via space"></textarea>
+                                                    </div>
+                                                </div>
+                                                <input type="text" hidden name="info" value="hobby">
+
+                                                <div class="text-center"><button type="submit"
+                                                        class="btn btn-white save" info="skill">Save</button></div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Accordion card -->
+
+
+                            </div>
+                            <!--/.Accordion wrapper-->
+
+                        </div>
+                    </div>
+                </div>
+                <!-- Content -->
+
+
+            </div>
+        </div>
+    </div>
+</div>

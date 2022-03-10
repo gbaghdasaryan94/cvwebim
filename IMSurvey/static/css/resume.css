@@ -1,0 +1,283 @@
+body {
+	background: #eae8e7;
+	color: #767270;
+	/* padding: 1%;
+	padding-top: 20px; */
+	font-size: 14px;
+	font-family: verdana, sans-serif;
+}
+
+.sidebar {
+	position: relative;
+	/* margin-left: 10%; */
+	background: #1de9b6;
+	color: #fff;
+	/* background-image: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12); */
+	/* background-image: linear-gradient(to right bottom, #25e3b3, #21e1b6, #1edfba, #1dddbc, #1edbbf); */
+	/* background-image: url('customar-_area_bg.jpg');
+	background-repeat: no-repeat;
+	background-size: cover; */
+	background-image: linear-gradient(to right top, #25e3b3, #21e1b6, #1edfba, #1dddbc, #1edbbf);
+}
+
+
+.content {
+	width: 100%;
+	margin-left: 2%;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.sidebar-top { 
+	position: relative; 
+	width: 100%;
+	height: 300px;
+}
+
+.profile-image{
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	background-size: cover;
+	background-position: top center;
+	background-repeat: no-repeat;
+}
+.profile-basic {
+	border-bottom: 1px solid #15a27f;
+}
+.designation{
+	margin: 0 0 20px;
+	padding: 0;
+	margin-left: 30px;
+}
+.us-name{
+	margin-top: 23px;
+	margin-left: 30px;
+	margin-bottom: 5px;
+}
+.profile-info {
+	padding: 20px 5px 20px 30px;
+	border-bottom: 1px solid #15a27f;
+}
+
+ .profile-info p{
+	margin: 5px 0;
+	line-height: 20px;
+	font-size: 1em;
+}
+
+.profile-info i{
+	margin-right: 10px;
+	font-size: 15px;	
+}
+
+.skills .skill-alone{
+    text-align: center;
+	padding: 10px 10px;
+	margin: 5px;
+	display: inline-block;
+    position: relative;
+	background-color: #fff;
+	color: #767270;
+}
+
+.profile-info.skills .skill-alone{
+	font-size: 12px;
+}
+
+.block {
+	margin-bottom: 30px;
+	padding: 5% 2% 5% 10%;
+	background: white;
+	box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
+}
+
+.info {
+	padding: 2% 1%;
+	border-bottom: 1px solid #bdbdbd;
+    position: relative;
+}
+
+
+.sub-heading { 
+font-weight: bold;       
+}
+
+.duration {
+	color: #14a17f;
+	font-size:12px;
+}
+
+.sidebar h2 {
+	font-size: 22px;
+	line-height: 30px;
+}
+.sidebar h4 {
+	font-size: 14px;
+}
+
+.block .skills .skill-alone{
+	background-color: #15a27f;
+	background-image: linear-gradient(to right top, #25e3b3, #21e1b6, #1edfba, #1dddbc, #1edbbf);
+	border-bottom: 0;
+	color: #fff;
+}
+
+.pers-skills h1{
+	margin-bottom: 20px;
+}
+.download{
+	/* position: absolute;
+	bottom: -120px;
+	left: 0; */
+	width: 100%;
+}
+.download a{
+	background-color: #1edfb9 ;
+	transition: all 0.25s ease;
+	color: #fff;
+	padding: 20px 20px;
+	width: 100%;
+	border: none;
+	outline: none;
+	font-weight: bold;
+}
+
+
+
+.download a i{
+	transition: all 0.25s ease;
+	margin-left: 5px;
+	vertical-align: middle;
+	color: #fff;
+	font-size: 22px;
+}
+
+.download:hover a i{
+	transform: scale(1.1);
+}
+
+.download:hover a {
+	background-color: #15a27f;
+	color: #fff;
+	letter-spacing: 1px;
+}
+
+.top.active {
+    right: 25px
+}
+
+.download-circle {
+    position: fixed;
+    bottom: 25px;
+    right: -100px;
+    background-color: #1edfb9;
+    z-index: 12;
+    -webkit-border-radius: 10em;
+    border-radius: 10em;
+    color: #fff;
+    font-size: 26px;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    cursor: pointer;
+    -webkit-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    transition: all .3s ease;
+    opacity: 1;
+}
+.download-circle i {
+	line-height: 0;
+	color: #fff;
+	vertical-align: middle;
+	font-size: 22px;
+}
+.download-circle:hover {
+    color: #fff;
+    background-color: #15a27f;
+    opacity: 1;
+}
+.download-circle.active {
+    right: 25px;
+}
+
+
+/* Edit and delete button */
+.edit {
+    display: none;
+    position: absolute;
+	right: 3%;
+	top: 0;
+}
+
+
+
+
+@media only screen and (max-width : 1200px){
+	.sidebar{
+		margin-left: 0;	
+	}
+	.profile-info p{
+		font-size: 12px;
+	}
+}
+
+@media only screen and (max-width : 992px){
+	
+	.download{
+		display: none;
+	}
+
+	.col-lg-8{
+		position: relative;
+	}
+
+	.sidebar{
+		margin-left: 0;	
+		position: inherit;
+		margin-bottom: 30px;
+	}
+	.download{
+		bottom: 0;
+	}
+	
+	.sidebar-top {
+		height: 500px;
+	}
+	.content{
+		margin-left: 0;
+	}
+	.download a{
+		z-index: 100;
+	}
+}
+
+@media only screen and (max-width : 762px){
+	.sidebar h2 {
+		margin-left: 20px;
+		font-size: 16px;
+		line-height: 18px;
+	}
+	.sidebar h4{
+		margin-left: 20px;
+	}
+	.profile-info {
+		padding: 20px 5px 20px 10px;
+	}
+	.profile-info h2{
+		margin-left: 5px;
+	}
+	.sidebar-top {
+		height: 400px;
+	}
+	
+}
+
+@media only screen and (max-width : 420px){
+	.sidebar-top {
+		height: 300px;
+	}
+}

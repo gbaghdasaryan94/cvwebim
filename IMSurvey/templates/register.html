@@ -1,0 +1,50 @@
+<div class="modal fade" id="register" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Sign Up</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form class="form" id="signup" action="/register" method="POST">
+                        <div class="input-group mb-3">
+                            <div id="fullname" class="input-group-prepend">
+                                <div class="input-group-text"><i class="fas fa-user"></i></div>
+                            </div>
+                            <input type="text" class="form-control" name="fullname" placeholder="Full Name">
+                        </div>
+                        <div id="email" class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text"><i class="fas fa-at"></i></div>
+                            </div>
+                            <input type="email" class="form-control" name="email" placeholder="Email">
+                        </div>
+                        <div id="password" class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text"><i class="fas fa-key"></i></div>
+                            </div>
+                            <input type="password" class="form-control" name="password" placeholder="Password">
+                        </div>
+                        <div id="confirm" class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text"><i class="fas fa-check-double"></i></div>
+                            </div>
+                            <input type="password" class="form-control" name="confirm"
+                                placeholder="Confirm password">
+                        </div>
+
+                        <button type="submit" class="btn btn-primary" disabled>Register</button>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                        <p>Already registered? <a href="#" data-toggle="modal" data-target="#login"><i class="fa fa-sign-in"
+                            aria-hidden="true"></i> Sign In</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/static/js/formcheck.js"></script>
