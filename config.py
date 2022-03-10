@@ -8,7 +8,7 @@ class Config:
     SECRET_KEY = environ.get('SECRET_KEY')
     FLASK_APP = environ.get('FLASK_APP')
     FLASK_ENV = environ.get('FLASK_ENV')
-    
+    ALLOWED_HOSTS = ['.herokuapp.com']
     APP_ROOT = path.dirname(path.abspath(__file__))
     
     APP_STATIC_ROOT = path.abspath('IMSurvey')
