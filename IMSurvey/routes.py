@@ -1,4 +1,5 @@
 from codecs import ignore_errors
+from platform import platform
 from flask import flash, jsonify, redirect, render_template, request, session, make_response
 
 from datetime import datetime
@@ -221,7 +222,7 @@ def contact():
 @app.route('/topdf/<int:version>', methods=["GET"])
 @login_required
 def pdf_converter(version):
-    config = pdfkit.configuration(wkhtmltopdf="./wkhtmltopdf")
+    config = pdfkit.configuration(wkhtmltopdf=".bin/wkhtmltopdf")
 
     options = {
         'page-size': 'A4',
