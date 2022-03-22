@@ -224,7 +224,6 @@ def contact():
 def pdf_converter(version):
     if (sys.platform == "darwin"):
         config = pdfkit.configuration(wkhtmltopdf="./wkhtmltopdf")
-        print(sys.platform)
     else:
         config = pdfkit.configuration(wkhtmltopdf=".bin/wkhtmltopdf")
 
