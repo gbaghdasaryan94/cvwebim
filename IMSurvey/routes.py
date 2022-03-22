@@ -222,6 +222,11 @@ def contact():
 @app.route('/topdf/<int:version>', methods=["GET"])
 @login_required
 def pdf_converter(version):
+    # if (platform.system() == "Darwin"):
+    #     config = pdfkit.configuration(wkhtmltopdf="./wkhtmltopdf")
+    # else:
+    #     config = pdfkit.configuration(wkhtmltopdf=".bin/wkhtmltopdf")
+
     config = pdfkit.configuration(wkhtmltopdf=".bin/wkhtmltopdf")
 
     options = {
@@ -259,7 +264,7 @@ def pdf_converter(version):
            os.path.join(app.config['APP_STATIC_ROOT'], f'static/resume/{version}.css')]
 
     
-    pdf = pdfkit.from_string(rendered, False, css=css,
+    pdf = pdfkit.from_string(rendered, False, css=css,configuration=config,
                             options=options)
 
     response = make_response(pdf)
