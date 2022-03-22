@@ -225,7 +225,7 @@ def pdf_converter(version):
     if (sys.platform == "darwin"):
         config = pdfkit.configuration(wkhtmltopdf="./wkhtmltopdf")
     else:
-        config = pdfkit.configuration(wkhtmltopdf=".bin/wkhtmltopdf")
+        config = pdfkit.configuration(wkhtmltopdf=".app/wkhtmltopdf")
 
     # config = pdfkit.configuration(wkhtmltopdf=".bin/wkhtmltopdf")
 
