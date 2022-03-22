@@ -1,7 +1,7 @@
 from codecs import ignore_errors
 from platform import platform
 from flask import flash, jsonify, redirect, render_template, request, session, make_response
-
+import sys
 from datetime import datetime
 from flask import current_app as app
 from .models import db, User, EWIinfo, Skillinfo
@@ -222,12 +222,13 @@ def contact():
 @app.route('/topdf/<int:version>', methods=["GET"])
 @login_required
 def pdf_converter(version):
-    # if (platform.system() == "Darwin"):
-    #     config = pdfkit.configuration(wkhtmltopdf="./wkhtmltopdf")
-    # else:
-    #     config = pdfkit.configuration(wkhtmltopdf=".bin/wkhtmltopdf")
+    if (sys.platform == "darwin"):
+        config = pdfkit.configuration(wkhtmltopdf="./wkhtmltopdf")
+        print(sys.platform)
+    else:
+        config = pdfkit.configuration(wkhtmltopdf=".bin/wkhtmltopdf")
 
-    config = pdfkit.configuration(wkhtmltopdf=".bin/wkhtmltopdf")
+    # config = pdfkit.configuration(wkhtmltopdf=".bin/wkhtmltopdf")
 
     options = {
         'page-size': 'A4',
