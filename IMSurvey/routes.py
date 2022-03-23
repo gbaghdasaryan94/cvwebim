@@ -1,6 +1,7 @@
 from codecs import ignore_errors
+from platform import platform
 from flask import flash, jsonify, redirect, render_template, request, session, make_response
-
+import sys
 from datetime import datetime
 from flask import current_app as app
 from .models import db, User, EWIinfo, Skillinfo
@@ -221,7 +222,12 @@ def contact():
 @app.route('/topdf/<int:version>', methods=["GET"])
 @login_required
 def pdf_converter(version):
-    config = pdfkit.configuration(wkhtmltopdf="./wkhtmltopdf")
+    #if (sys.platform == "darwin"):
+    #    config = pdfkit.configuration(wkhtmltopdf="./wkhtmltopdf")
+    #else:
+    #    config = pdfkit.configuration(wkhtmltopdf="./wkhtmltopdf")
+
+    # config = pdfkit.configuration(wkhtmltopdf=".bin/wkhtmltopdf")
 
     options = {
         'page-size': 'A4',
@@ -258,8 +264,8 @@ def pdf_converter(version):
            os.path.join(app.config['APP_STATIC_ROOT'], f'static/resume/{version}.css')]
 
     
-    pdf = pdfkit.from_string(rendered, False, css=css,
-                            options=options)
+    #pdf = pdfkit.from_string(rendered, False, css=css,configuration=config, options=options)
+    pdf = pdfkit.from_string(rendered, False, css=css, options=options)
 
     response = make_response(pdf)
     response.headers['Content-Type'] = 'application/pdf'
