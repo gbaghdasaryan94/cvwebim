@@ -222,10 +222,10 @@ def contact():
 @app.route('/topdf/<int:version>', methods=["GET"])
 @login_required
 def pdf_converter(version):
-    if (sys.platform == "darwin"):
-        config = pdfkit.configuration(wkhtmltopdf="./wkhtmltopdf")
-    else:
-        config = pdfkit.configuration(wkhtmltopdf="./wkhtmltopdf")
+    #if (sys.platform == "darwin"):
+    #    config = pdfkit.configuration(wkhtmltopdf="./wkhtmltopdf")
+    #else:
+    #    config = pdfkit.configuration(wkhtmltopdf="./wkhtmltopdf")
 
     # config = pdfkit.configuration(wkhtmltopdf=".bin/wkhtmltopdf")
 
