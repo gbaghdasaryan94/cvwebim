@@ -264,8 +264,8 @@ def pdf_converter(version):
            os.path.join(app.config['APP_STATIC_ROOT'], f'static/resume/{version}.css')]
 
     
-    pdf = pdfkit.from_string(rendered, False, css=css,configuration=config,
-                            options=options)
+    #pdf = pdfkit.from_string(rendered, False, css=css,configuration=config, options=options)
+    pdf = pdfkit.from_string(rendered, False, css=css, options=options)
 
     response = make_response(pdf)
     response.headers['Content-Type'] = 'application/pdf'
