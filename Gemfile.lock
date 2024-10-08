@@ -4,14 +4,18 @@ GEM
     rack (2.2.3)
     sinatra (1.0)
       rack (>= 1.0)
-    wkhtmltopdf-binary-edge (0.12.6.0)
+    wkhtmltopdf-heroku (3.0.0)
 
 PLATFORMS
   universal-darwin-21
+  universal-darwin-23
 
 DEPENDENCIES
   sinatra (= 1.0)
-  wkhtmltopdf-binary-edge (~> 0.12.6.0)
+  wkhtmltopdf-heroku
+
+RUBY VERSION
+   ruby 2.6.10p210
 
 BUNDLED WITH
    2.3.9
