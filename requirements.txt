@@ -5,3 +5,5 @@ requests
 pdfkit
 flask_mail
 gunicorn
+mysqlclient
+PyMySQL

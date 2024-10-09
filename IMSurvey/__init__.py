@@ -18,27 +18,6 @@ def create_app():
         from . import routes
         
         # Create tables for our models
-        dbpath = os.path.abspath('survey.db')
-        if not os.path.exists(dbpath):  # Check for the survey.db database file
-            # Create tables for our models
-            db.create_all()
-            print("-----------------Database created!--------------------------------")
-        else:
-            print("Database already exists. Skipping creation.")
-        
-        #Check if tables exist 
-        existing_tables = db.metadata.tables.keys()
-        print("Existing tables:", list(existing_tables))
-        
-        #  Specify the tables you expect to exist
-        expected_tables = ['users', 'ewi_info', 'skill_info']  # List of expected table names
-
-            # Create tables that do not exist
-        for table in expected_tables:
-            if table not in existing_tables:
-                db.create_all()
-                print(f"Table '{table}' created.")
-            else:
-                print(f"Table '{table}' already exists.")
+        db.create_all()
         
         return app

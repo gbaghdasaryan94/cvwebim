@@ -32,7 +32,9 @@ class Config:
     # FLASK_APP="wsgi.py"
     # FLASK_DEBUG=1
     APP_CONFIG_FILE="config.ini"
-    SQLALCHEMY_DATABASE_URI="sqlite:///survey.db"
+
+    # SQLALCHEMY_DATABASE_URI="sqlite:///survey.db"
+    SQLALCHEMY_DATABASE_URI='mysql://vqc83wwwb68h5ox9:jv48oyhkkncd66fl@f80b6byii2vwv8cx.chr7pe7iynqr.eu-west-1.rds.amazonaws.com:3306/ihn0vezkznn35z74'
     SQLALCHEMY_TRACK_MODIFICATIONS=False
 
     MAIL_SERVER = 'smtp.beget.com'
