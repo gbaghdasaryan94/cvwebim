@@ -134,7 +134,6 @@ def onboarding():
                 except ValueError as e:
                     print("format is invalid", e)
                 data["isComplete"] = True
-                print(data)
                 user.update(data)
                 # db.session.query(User).filter_by(id = 2).update(data)
                 db.session.commit()
