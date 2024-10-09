@@ -128,8 +128,8 @@ def onboarding():
                     os.makedirs('/IMSurvey/'.join([app.config['APP_ROOT'], app.config['IMAGE_UPLOADS']]))
                 image.save('/IMSurvey/'.join([app.config['APP_ROOT'], filename]))
                 data["avatar"] = filename
-                data["birth"] = datetime.strptime(
-                    data["birth"], "%Y-%m-%d").date()
+                # data["birth"] = datetime.strptime(
+                #     data["birth"], "%Y-%m-%d").date()
                 data["isComplete"] = True
                 print(data)
                 user.update(data)
