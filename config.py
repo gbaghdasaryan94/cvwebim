@@ -40,8 +40,8 @@ class Config:
     MAIL_USE_TLS = False
     MAIL_USE_SSL = True
     # MAIL_DEBUG = True 
-    MAIL_USERNAME = 'imsurvey@kit.am'
-    MAIL_PASSWORD = 'Instigate555'
+    MAIL_USERNAME = 'garnik_cv@yopmail.com'
+    # MAIL_PASSWORD = 'Instigate555'
     MAIL_DEFAULT_SENDER = ("IMsurvey Contact Form",'imsurvey@kit.am')
     MAIL_MAX_EMAILS = None
     # MAIL_SUPPRESS_SEND = False
