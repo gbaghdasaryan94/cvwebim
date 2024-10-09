@@ -4,3 +4,4 @@ flask_session
 requests
 pdfkit
 flask_mail
+gunicorn
