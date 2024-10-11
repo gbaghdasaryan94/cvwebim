@@ -1,9 +1,10 @@
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
-from flask_session import Session
+from dotenv import load_dotenv
 
 db = SQLAlchemy()
 
+load_dotenv()
 
 def create_app():
     """Construct the core application."""
