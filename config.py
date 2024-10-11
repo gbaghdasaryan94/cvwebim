@@ -1,5 +1,5 @@
 from os import environ, path
-from tempfile import mkdtemp
+
 
 class Config:
     """Set Flask configuration vars from .env file."""
@@ -22,9 +22,7 @@ class Config:
     TEMPLATES_AUTO_RELOAD = True
 
     # Configure session to use filesystem (instead of signed cookies)
-    SESSION_FILE_DIR = mkdtemp()
-    SESSION_PERMANENT = False
-    SESSION_TYPE = "filesystem"
+
 
     # Database
     # SQLALCHEMY_DATABASE_URI = "sqlite:///survey.db"
@@ -39,11 +37,19 @@ class Config:
     DB_PASSWORD ='hlf446kthgwg7fks'
     DB_NAME = 'ihn0vezkznn35z74'
 
-
     # SQLALCHEMY_DATABASE_URI="sqlite:///survey.db"
     SQLALCHEMY_DATABASE_URI=f'mysql://{DB_USERNAME}:{DB_PASSWORD}@{DB_HOST}:3306/{DB_NAME}'
-
     SQLALCHEMY_TRACK_MODIFICATIONS=False
+
+    # Set up Flask-Session to store sessions in JawsDB Maria
+
+    SESSION_TYPE = "sqlalchemy"
+    SESSION_PERMANENT = False
+    SESSION_USE_SIGNER = True
+
+    
+
+    
 
     MAIL_SERVER = 'smtp.beget.com'
     MAIL_PORT = 465

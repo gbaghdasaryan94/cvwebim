@@ -58,3 +58,13 @@ class Skillinfo(db.Model):
 
     def __repr__(self):
         return f'<Skillinfo id:{self.uid}, skill:{self.skill}, info:{self.info}>'
+    
+class Flask_Sessions(db.Model):
+    """storing session to DB"""
+    __tablename__ = 'flask_Session'
+    id = db.Column(db.VARCHAR(255),primary_key=True, nullable=False)
+    session_data = db.Column(db.Text, nullable=False)
+    expiry = db.Column(db.DateTime, nullable=False)
+    
+    def __repr__(self):
+        return f'<Flask_Sessions id:{self.id}, session_data:{self.session_data}'
