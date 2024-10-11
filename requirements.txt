@@ -8,3 +8,4 @@ gunicorn
 mysqlclient
 PyMySQL
 wkhtmltopdf
+flask-mysqldb

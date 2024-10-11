@@ -1,5 +1,4 @@
 from os import environ, path
-import tempfile
 
 class Config:
     """Set Flask configuration vars from .env file."""
@@ -21,21 +20,28 @@ class Config:
     # Ensure templates are auto-reloaded
     TEMPLATES_AUTO_RELOAD = True
 
-    # Configure session to use filesystem (instead of signed cookies)
-    # Create a temporary directory
-    SESSION_FILE_DIR = tempfile.mkdtemp()
+    # Configuring MySQL (JawsDB Maria) connection
+    MYSQL_HOST = 'f80b6byii2vwv8cx.chr7pe7iynqr.eu-west-1.rds.amazonaws.com'
+    MYSQL_USER = 'vqc83wwwb68h5ox9'
+    MYSQL_PASSWORD = 'jv48oyhkkncd66fl'
+    MYSQL_DB = 'ihn0vezkznn35z74'
+    
+    # Initialize MySQL
+    # Set up Flask-Session to store sessions in JawsDB Maria
+    SESSION_TYPE = 'sqlalchemy'
     SESSION_PERMANENT = False
-    SESSION_TYPE = "filesystem"
+    SESSION_USE_SIGNER = True
+   
+
+    # SQLAlchemy Database URI for JawsDB Maria (using pymysql)
+    SQLALCHEMY_DATABASE_URI = f'mysql+pymysql://{MYSQL_USER}:{MYSQL_PASSWORD}@{MYSQL_HOST}/{MYSQL_DB}'
 
     # Database
-    # SQLALCHEMY_DATABASE_URI = "sqlite:///survey.db"
     SQLALCHEMY_TRACK_MODIFICATIONS = environ.get("SQLALCHEMY_TRACK_MODIFICATIONS")
     # FLASK_APP="wsgi.py"
     # FLASK_DEBUG=1
     APP_CONFIG_FILE="config.ini"
 
-    # SQLALCHEMY_DATABASE_URI="sqlite:///survey.db"
-    SQLALCHEMY_DATABASE_URI='mysql://vqc83wwwb68h5ox9:jv48oyhkkncd66fl@f80b6byii2vwv8cx.chr7pe7iynqr.eu-west-1.rds.amazonaws.com:3306/ihn0vezkznn35z74'
     SQLALCHEMY_TRACK_MODIFICATIONS=False
 
     MAIL_SERVER = 'smtp.beget.com'
@@ -47,5 +53,5 @@ class Config:
     # MAIL_PASSWORD = 'Instigate555'
     MAIL_DEFAULT_SENDER = ("IMsurvey Contact Form",'imsurvey@kit.am')
     MAIL_MAX_EMAILS = None
-    # MAIL_SUPPRESS_SEND = False
+    # MAIL_SUPPRESS_SEND = False1
     MAIL_ASCII_ATTACHMENTS = False
