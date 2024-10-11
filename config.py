@@ -33,8 +33,16 @@ class Config:
     # FLASK_DEBUG=1
     APP_CONFIG_FILE="config.ini"
 
+    # Configuring MySQL (JawsDB Maria) connection
+    DB_HOST ='f80b6byii2vwv8cx.chr7pe7iynqr.eu-west-1.rds.amazonaws.com'
+    DB_USERNAME='vqc83wwwb68h5ox9'
+    DB_PASSWORD ='hlf446kthgwg7fks'
+    DB_NAME = 'ihn0vezkznn35z74'
+
+
     # SQLALCHEMY_DATABASE_URI="sqlite:///survey.db"
-    SQLALCHEMY_DATABASE_URI='mysql://vqc83wwwb68h5ox9:jv48oyhkkncd66fl@f80b6byii2vwv8cx.chr7pe7iynqr.eu-west-1.rds.amazonaws.com:3306/ihn0vezkznn35z74'
+    SQLALCHEMY_DATABASE_URI=f'mysql://{DB_USERNAME}:{DB_PASSWORD}@{DB_HOST}:3306/{DB_NAME}'
+
     SQLALCHEMY_TRACK_MODIFICATIONS=False
 
     MAIL_SERVER = 'smtp.beget.com'
