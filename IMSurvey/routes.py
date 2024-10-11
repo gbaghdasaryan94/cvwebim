@@ -156,6 +156,7 @@ def addNew(info):
             if key in data:
                 data[key] = datetime.strptime(data[key], "%Y-%m-%d").date()
         new_info = table[info](**data)
+        print(new_info)
         db.session.add(new_info)
         db.session.commit()
     except ValueError:

@@ -1,5 +1,5 @@
 from os import environ, path
-from tempfile import mkdtemp
+import tempfile
 
 class Config:
     """Set Flask configuration vars from .env file."""
@@ -22,7 +22,8 @@ class Config:
     TEMPLATES_AUTO_RELOAD = True
 
     # Configure session to use filesystem (instead of signed cookies)
-    SESSION_FILE_DIR = mkdtemp()
+    # Create a temporary directory
+    SESSION_FILE_DIR = tempfile.mkdtemp()
     SESSION_PERMANENT = False
     SESSION_TYPE = "filesystem"
 
