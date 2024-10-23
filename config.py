@@ -1,5 +1,5 @@
 from os import environ, path
-from tempfile import mkdtemp
+
 
 class Config:
     """Set Flask configuration vars from .env file."""
@@ -22,9 +22,7 @@ class Config:
     TEMPLATES_AUTO_RELOAD = True
 
     # Configure session to use filesystem (instead of signed cookies)
-    SESSION_FILE_DIR = mkdtemp()
-    SESSION_PERMANENT = False
-    SESSION_TYPE = "filesystem"
+
 
     # Database
     # SQLALCHEMY_DATABASE_URI = "sqlite:///survey.db"
@@ -32,16 +30,34 @@ class Config:
     # FLASK_APP="wsgi.py"
     # FLASK_DEBUG=1
     APP_CONFIG_FILE="config.ini"
-    SQLALCHEMY_DATABASE_URI="sqlite:///survey.db"
+
+    # Configuring MySQL (JawsDB Maria) connection
+    DB_HOST ='f80b6byii2vwv8cx.chr7pe7iynqr.eu-west-1.rds.amazonaws.com'
+    DB_USERNAME='vqc83wwwb68h5ox9'
+    DB_PASSWORD ='hlf446kthgwg7fks'
+    DB_NAME = 'ihn0vezkznn35z74'
+
+    # SQLALCHEMY_DATABASE_URI="sqlite:///survey.db"
+    SQLALCHEMY_DATABASE_URI=f'mysql://{DB_USERNAME}:{DB_PASSWORD}@{DB_HOST}:3306/{DB_NAME}'
     SQLALCHEMY_TRACK_MODIFICATIONS=False
+
+    # Set up Flask-Session to store sessions in JawsDB Maria
+
+    SESSION_TYPE = "sqlalchemy"
+    SESSION_PERMANENT = False
+    SESSION_USE_SIGNER = True
+
+    
+
+    
 
     MAIL_SERVER = 'smtp.beget.com'
     MAIL_PORT = 465
     MAIL_USE_TLS = False
     MAIL_USE_SSL = True
     # MAIL_DEBUG = True 
-    MAIL_USERNAME = 'imsurvey@kit.am'
-    MAIL_PASSWORD = 'Instigate555'
+    MAIL_USERNAME = 'garnik_cv@yopmail.com'
+    # MAIL_PASSWORD = 'Instigate555'
     MAIL_DEFAULT_SENDER = ("IMsurvey Contact Form",'imsurvey@kit.am')
     MAIL_MAX_EMAILS = None
     # MAIL_SUPPRESS_SEND = False
