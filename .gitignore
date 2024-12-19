@@ -224,4 +224,5 @@ cython_debug/
 # End of https://www.toptal.com/developers/gitignore/api/visualstudiocode,python,macos,git
 
 .bundle
-
+# Keep environment file local
+.env

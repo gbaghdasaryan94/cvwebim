@@ -1,5 +1,9 @@
 from os import environ, path
+from dotenv import load_dotenv
 
+
+# Load environment variables from .env file
+load_dotenv()
 
 class Config:
     """Set Flask configuration vars from .env file."""
@@ -31,19 +35,19 @@ class Config:
     # FLASK_DEBUG=1
     APP_CONFIG_FILE="config.ini"
 
-    # Configuring MySQL (JawsDB Maria) connection
-    DB_HOST ='f80b6byii2vwv8cx.chr7pe7iynqr.eu-west-1.rds.amazonaws.com'
-    DB_USERNAME='vqc83wwwb68h5ox9'
-    DB_PASSWORD ='hlf446kthgwg7fks'
-    DB_NAME = 'ihn0vezkznn35z74'
+    # Configuring Postgres (JawsDB Maria) connection
+    DB_HOST ='c5p86clmevrg5s.cluster-czrs8kj4isg7.us-east-1.rds.amazonaws.com'
+    DB_USERNAME='u3rtin6ohqv1mv'
+    DB_PASSWORD ='p9393a802f81f789d0d4f255aa4250d1f4cad4959ee166c96852d5f4abd3b6f3d'
+    DB_NAME = 'd88sllttan6ntu'
 
     # SQLALCHEMY_DATABASE_URI="sqlite:///survey.db"
-    SQLALCHEMY_DATABASE_URI=f'mysql://{DB_USERNAME}:{DB_PASSWORD}@{DB_HOST}:3306/{DB_NAME}'
-    SQLALCHEMY_TRACK_MODIFICATIONS=False
+    SQLALCHEMY_DATABASE_URI = f'postgresql://{DB_USERNAME}:{DB_PASSWORD}@{DB_HOST}:5432/{DB_NAME}'
+    SQLALCHEMY_TRACK_MODIFICATIONS = False
 
     # Set up Flask-Session to store sessions in JawsDB Maria
 
-    SESSION_TYPE = "sqlalchemy"
+    # SESSION_TYPE = "sqlalchemy"
     SESSION_PERMANENT = False
     SESSION_USE_SIGNER = True
 

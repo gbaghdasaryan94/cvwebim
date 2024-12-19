@@ -5,5 +5,5 @@ requests
 pdfkit
 flask_mail
 gunicorn
-mysqlclient
-PyMySQL
+psycopg2-binary
+python-dotenv
